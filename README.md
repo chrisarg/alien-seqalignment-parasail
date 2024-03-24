@@ -2,12 +2,16 @@
 
 Alien::SeqAlignment::parasail - find, build and install the parasail library
 
+# VERSION
+
+version 0.05
+
 # SYNOPSIS
 
-To execute the alignment using the commande line tool:
+To execute the alignment using the command line tool:
 
     use Alien::parasail;
-    system Alien::SeqAlignment::parasail->exe, (list of options);
+    system Alien::SeqAlignment::parasail->parasail_aligner, (list of options);
 
 # DESCRIPTION
 
@@ -24,9 +28,9 @@ The build provides the static and shared libraries, but also the CLI aligner
 
 # METHODS
 
-## exe
+## parasail\_aligner
 
-    Alien::SeqAlignment::parasail->exe
+    Alien::SeqAlignment::parasail->parasail_aligner
 
 Returns the command name for running the CLI version of the parasail aligner.
 
@@ -53,7 +57,6 @@ Returns the command name for running the CLI version of the parasail aligner.
     variants exist because parasail is intended to be high-performing; 
     calculating additional statistics or the traceback will perform slower 
     than simply calculating the alignment score. 
-    Select the appropriate implementation for your needs.
 
 - [Alien](https://metacpan.org/pod/Alien)
 
@@ -66,6 +69,11 @@ Returns the command name for running the CLI version of the parasail aligner.
 - [Alien::Build::Manual::AlienUser](https://metacpan.org/pod/Alien%3A%3ABuild%3A%3AManual%3A%3AAlienUser)
 
     Detailed manual for users of Alien classes.
+
+- [Bio::SeqAlignment](https://metacpan.org/pod/Bio::SeqAlignment)
+
+    A collection of tools and libraries for aligning biological sequences 
+    from within Perl. 
 
 # AUTHOR
 
